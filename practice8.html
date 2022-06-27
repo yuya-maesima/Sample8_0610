@@ -5,8 +5,8 @@
     <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
   </head>
 <body>
- <h1>背景色を付けた</h1>
- 背景色をつけてみた
+ <h1>背景色とビルボードについての学習</h1>
+
  <script>
       // ページの読み込みを待つ
       window.addEventListener('DOMContentLoaded', init);
@@ -53,12 +53,11 @@
         const axisHelper = new THREE.AxisHelper(2); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
-         // 木をスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
         var texture = textureLoader.load("img/star.png");
         const material2 = new THREE.SpriteMaterial({ map: texture,});
 
-        // 森を作成
+    
         for (let i = 0; i < 20; i++) {
           const sprite = new THREE.Sprite(material2);
           // ランダムな座標に配置
@@ -132,4 +131,6 @@
         }
       }
     </script>
+   <p>本課題では、レンダリングの背景色を設定して、背景の色を変更した。</p>
+  <p>また、Spriteを使用して、星の画像をビルボードで実現した。</p>
 </body>
